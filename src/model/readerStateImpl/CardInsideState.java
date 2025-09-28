@@ -2,7 +2,7 @@ package model.readerStateImpl;
 
 import java.io.IOException;
 
-import data.Account;
+import model.Account;
 import model.ReaderState;
 import model.subjectImpl.CardReader;
 

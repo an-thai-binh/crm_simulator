@@ -21,7 +21,7 @@ public class CRMFrame extends JFrame {
 	 */
 	private void setIcon() {
 		// TODO Auto-generated method stub
-		ImageIcon crmIcon = new ImageIcon("src//image//cashicon.png");
+		ImageIcon crmIcon = new ImageIcon(CRMFrame.class.getResource("/images/cashicon.png"));
 		this.setIconImage(crmIcon.getImage());
 	}
 

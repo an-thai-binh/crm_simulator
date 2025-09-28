@@ -1,6 +1,6 @@
 package model.readerStateImpl;
 
-import data.Account;
+import model.Account;
 import model.ReaderState;
 import model.subjectImpl.CardReader;
 

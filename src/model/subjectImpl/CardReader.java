@@ -3,7 +3,7 @@ package model.subjectImpl;
 import java.util.ArrayList;
 import java.util.List;
 
-import data.Account;
+import model.Account;
 import model.*;
 import model.readerStateImpl.CardInsideState;
 import model.readerStateImpl.NoCardInsideState;

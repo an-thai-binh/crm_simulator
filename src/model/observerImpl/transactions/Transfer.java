@@ -3,7 +3,7 @@ package model.observerImpl.transactions;
 import java.io.IOException;
 import java.time.LocalDateTime;
 
-import data.Account;
+import model.Account;
 import model.printInvoiceBehaviorImpl.TransferInvoice;
 import model.observerImpl.Transaction;
 

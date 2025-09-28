@@ -1,7 +1,5 @@
 package model;
 
-import data.Account;
-
 public interface ReaderState {
 	public boolean insertCard(Account aInfo);
 	public boolean checkCardStatus();

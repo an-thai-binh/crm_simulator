@@ -2,7 +2,7 @@ package model.observerImpl;
 
 import java.time.LocalDateTime;
 
-import data.Account;
+import model.Account;
 import model.Observer;
 import model.PrintInvoiceBehavior;
 

@@ -1,6 +1,6 @@
 package model.observerImpl;
 
-import data.Account;
+import model.Account;
 import model.Observer;
 
 public class InformationReader implements Observer {

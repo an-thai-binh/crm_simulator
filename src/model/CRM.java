@@ -2,8 +2,6 @@ package model;
 
 import java.util.List;
 
-import data.Account;
-import data.BankOwner;
 import model.observerImpl.InformationReader;
 import model.subjectImpl.CardReader;
 import model.observerImpl.transactions.Deposit;
@@ -27,7 +25,7 @@ public class CRM {
 	}
 	
 	public boolean checkValidCard(String username, String cardID) {
-		List<Account> accountList = bank.getAccountList();
+		List<Account> accountList = bank.getAccounts();
 		for (Account aInfo : accountList) {
 			if(aInfo.getUserName().equals(username) && aInfo.getCardID().equals(cardID))
 				return true;
@@ -90,7 +88,7 @@ public class CRM {
 	public void transferMoney(String account, double money) {
 		// TODO Auto-generated method stub
 		Account receivedAcc = null;
-		List<Account> accountList = bank.getAccountList();
+		List<Account> accountList = bank.getAccounts();
 		for (Account aInfo : accountList) {
 			if(aInfo.getCardID().equals(account)) {
 				receivedAcc = aInfo;
@@ -108,7 +106,7 @@ public class CRM {
 	}
 
 	public String getNameByAccount(String account) {
-		List<Account> accountList = bank.getAccountList();
+		List<Account> accountList = bank.getAccounts();
 		for (Account aInfo : accountList) {
 			if(aInfo.getCardID().equals(account))
 				return aInfo.getUserName();

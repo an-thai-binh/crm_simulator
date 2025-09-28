@@ -3,7 +3,7 @@ package model.printInvoiceBehaviorImpl;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
-import data.Account;
+import model.Account;
 import model.PrintInvoiceBehavior;
 
 public class DepositInvoice implements PrintInvoiceBehavior {
