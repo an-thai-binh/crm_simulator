@@ -1,6 +1,7 @@
 package controller;
 
 import model.CRM;
+import model.ICRM;
 import utils.Formatter;
 import view.ICRMView;
 
@@ -9,15 +10,16 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.StringTokenizer;
 
-public class CRMController {
-	private CRM crm;
+public class CRMController implements ICRMController {
+	private ICRM model;
 	private ICRMView view;
 
-	public CRMController(ICRMView view) {
-		crm = new CRM();
+	public CRMController(ICRMView view, ICRM model) {
+		this.model = model;
 		this.view = view;
 	}
 
+	@Override
 	public void start() {
 		view.display(new CRMListener());
 	}
@@ -30,76 +32,76 @@ public class CRMController {
 	 */
 	public boolean insertCard(String username, String cardID) {
 		// TODO Auto-generated method stub
-		return crm.insertCard(username, cardID);
+		return model.insertCard(username, cardID);
 	}
 	
 	public boolean checkCardStatus() {
 		// TODO Auto-generated method stub
-		return crm.checkCardStatus();
+		return model.checkCardStatus();
 	}
 	
 	public boolean checkPIN(String pin) {
 		// TODO Auto-generated method stub
-		return crm.checkPIN(pin);
+		return model.checkPIN(pin);
 	}
 
 	public void lockCard() {
 		// TODO Auto-generated method stub
-		crm.lockCard();
+		model.lockCard();
 	}
 
 	public String getInfoCurrentBalance() {
 		// TODO Auto-generated method stub
-		return "" + crm.getInfoCurrentBalance();
+		return "" + model.getInfoCurrentBalance();
 	}
 
 	public void returnCard() {
-		crm.returnCard();
+		model.returnCard();
 	}
 
 	public String getInfoUsername() {
 		// TODO Auto-generated method stub
-		return crm.getInfoUsername();
+		return model.getInfoUsername();
 	}
 
 	public String getInfoCardID() {
 		// TODO Auto-generated method stub
-		return crm.getInfoCardID();
+		return model.getInfoCardID();
 	}
 
 	public boolean checkTransactionMoney(double money) {
 		// TODO Auto-generated method stub
-		return crm.checkTransactionMoney(money);
+		return model.checkTransactionMoney(money);
 	}
 
 	public void withdrawMoney(double money) {
 		// TODO Auto-generated method stub
-		crm.withdrawMoney(money);
+		model.withdrawMoney(money);
 		
 	}
 	
 	public void depositMoney(double money) {
 		// TODO Auto-generated method stub
-		crm.depositMoney(money);
+		model.depositMoney(money);
 	}
 	
 	public boolean checkValidCard(String username, String cardID) {
 		// TODO Auto-generated method stub
-		return crm.checkValidCard(username, cardID);
+		return model.checkValidCard(username, cardID);
 	}
 
 	public String printInvoice() {
-		return crm.printInvoice();
+		return model.printInvoice();
 		
 	}
 
 	public String getNameByAccount(String account) {
 		// TODO Auto-generated method stub
-		return crm.getNameByAccount(account);
+		return model.getNameByAccount(account);
 	}
 
 	public void transferMoney(String account, double money) {
-		crm.transferMoney(account, money);
+		model.transferMoney(account, money);
 		
 	}
 

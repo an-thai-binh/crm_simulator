@@ -358,9 +358,9 @@ public class CRMView extends JFrame implements ICRMView {
 
         /**
          * render trang chuyển khoản
-         * @param transferAccountField
-         * @param accountName
-         * @param transferAmountField
+         * @param transferAccountField JTextField quản lý số tài khoản
+         * @param accountName tên tài khoản
+         * @param transferAmountField JTextField quản lý số tiền chuyển
          */
         public void renderTransferScreen(JTextField transferAccountField, String accountName, JTextField transferAmountField) {
             screenPane.removeAll();
