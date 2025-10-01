@@ -1,10 +1,9 @@
-import view.CRMFrame;
-import view2.CRMView;
-import view2.ICRMView;
+import controller.CRMController;
+import view.CRMView;
 
 public class CRMSimulatorApp {
     public static void main(String[] args) {
-        ICRMView view = new CRMView();
-        view.display();
+        CRMController controller = new CRMController(new CRMView());
+        controller.start();
     }
 }
