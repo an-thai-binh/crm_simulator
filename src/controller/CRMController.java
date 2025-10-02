@@ -77,12 +77,19 @@ public class CRMController implements ICRMController {
 	public void withdrawMoney(double money) {
 		// TODO Auto-generated method stub
 		model.withdrawMoney(money);
-		
 	}
 	
 	public void depositMoney(double money) {
 		// TODO Auto-generated method stub
 		model.depositMoney(money);
+	}
+
+	public void transferMoney(String account, double money) {
+		model.transferMoney(account, money);
+	}
+
+	public String printInvoice() {
+		return model.printInvoice();
 	}
 	
 	public boolean checkValidCard(String username, String cardID) {
@@ -90,19 +97,9 @@ public class CRMController implements ICRMController {
 		return model.checkValidCard(username, cardID);
 	}
 
-	public String printInvoice() {
-		return model.printInvoice();
-		
-	}
-
 	public String getNameByAccount(String account) {
 		// TODO Auto-generated method stub
 		return model.getNameByAccount(account);
-	}
-
-	public void transferMoney(String account, double money) {
-		model.transferMoney(account, money);
-		
 	}
 
 	class CRMListener implements ActionListener {

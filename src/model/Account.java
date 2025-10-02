@@ -50,8 +50,8 @@ public class Account {
 		return locked;
 	}
 
-	public void setLocked(boolean newLocked) throws IOException {
-		this.locked = newLocked;
+	public void setLocked(boolean isLocked) throws IOException {
+		this.locked = isLocked;
 		// save db
 		AccountDao accountDao = new AccountDao();
 		accountDao.lockCard(this.getCardID());
